@@ -884,10 +884,10 @@
 
     <script src="assets/js/main.js"></script>
 
-    <script>
-  function sendToWhatsApp() {
-    
 
+
+<script>
+  function sendToWhatsApp() {
     const guestName = document.getElementById('guest_name').value;
     const locationType = document.getElementById('location_type').value;
     const locationName = document.getElementById('location_name').value;
@@ -906,14 +906,13 @@ Number of Persons: ${numberOfPersons}%0A
 Membership Name: ${membershipName}%0A
 Membership Code: ${membershipCode}%0A
 Membership ID: ${membershipID}%0A
-Additional Info: ${message}`;
-
-
+Additional Info: ${additionalInfo}`;
 
     const whatsappUrl = `https://wa.me/919555695021?text=${whatsappMessage}`;
     window.open(whatsappUrl, "_blank");
   }
 </script>
+
 
 
 <script>
