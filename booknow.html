@@ -886,19 +886,29 @@
 
     <script>
   function sendToWhatsApp() {
-    const guestName = document.getElementById("guest_name").value;
-    const locationType = document.getElementById("location_type").value;
-    const locationName = document.getElementById("location_name").value;
-    const sightseeingDate = document.getElementById("sightseeing_date1").value;
-    const numberOfPersons = document.getElementById("number_of_persons").value;
-    const message = document.getElementById("message").value;
+    
+
+    const guestName = document.getElementById('guest_name').value;
+    const locationType = document.getElementById('location_type').value;
+    const locationName = document.getElementById('location_name').value;
+    const sightseeingDate = document.getElementById('sightseeing_date1').value;
+    const numberOfPersons = document.getElementById('number_of_persons').value;
+    const membershipName = document.getElementById('membership_name').value;
+    const membershipCode = document.getElementById('membership_code').value;
+    const membershipID = document.getElementById('membership_id').value;
+    const additionalInfo = document.getElementById('message').value;
 
     const whatsappMessage = `Guest Name: ${guestName}%0A
 Location Type: ${locationType}%0A
 Location Name: ${locationName}%0A
 Sightseeing Date: ${sightseeingDate}%0A
 Number of Persons: ${numberOfPersons}%0A
+Membership Name: ${membershipName}%0A
+Membership Code: ${membershipCode}%0A
+Membership ID: ${membershipID}%0A
 Additional Info: ${message}`;
+
+
 
     const whatsappUrl = `https://wa.me/919555695021?text=${whatsappMessage}`;
     window.open(whatsappUrl, "_blank");
