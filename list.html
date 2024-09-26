@@ -1,0 +1,169 @@
+<form id="sightseeing_booking_form">
+  <div class="contact-form-wrap">
+    <h4>Sightseeing Booking Form</h4>
+    <p>Please send your query using the format below for each booking:</p>
+
+    <!-- Membership Details Section -->
+    <div class="row">
+      <!-- Membership Name -->
+      <div class="col-lg-6">
+        <div class="custom-input-group">
+          <label for="membership_name">Membership Name</label>
+          <input
+            type="text"
+            placeholder="Enter Membership Name"
+            id="membership_name"
+            required
+          />
+        </div>
+      </div>
+
+      <!-- Membership Code -->
+      <div class="col-lg-6">
+        <div class="custom-input-group">
+          <label for="membership_code">Membership Code</label>
+          <input
+            type="text"
+            placeholder="Enter Membership Code"
+            id="membership_code"
+            required
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Membership ID -->
+      <div class="col-lg-6">
+        <div class="custom-input-group">
+          <label for="membership_id">Membership ID</label>
+          <input
+            type="text"
+            placeholder="Enter Membership ID"
+            id="membership_id"
+            required
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Guest Information Section -->
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="custom-input-group">
+          <label for="guest_name">Guest Name</label>
+          <input
+            type="text"
+            placeholder="Enter guest name"
+            id="guest_name"
+            required
+          />
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="custom-input-group">
+          <label for="location_type">Location Type</label>
+          <select
+            id="location_type"
+            required
+            style="
+              width: 100%;
+              padding: 10px;
+              border: 1px solid #ddd;
+              border-radius: 5px;
+            "
+          >
+            <option value="" disabled selected>Select Location Type</option>
+            <option value="domestic">Domestic</option>
+            <option value="international">International</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="custom-input-group">
+          <label for="location_name">Location Name</label>
+          <input
+            type="text"
+            placeholder="Enter location name"
+            id="location_name"
+            required
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="custom-input-group">
+          <label for="sightseeing_date1">Sightseeing Date</label>
+          <input type="date" id="sightseeing_date1" required />
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="custom-input-group">
+          <label for="number_of_persons">Number of Persons</label>
+          <select
+            id="number_of_persons"
+            required
+            style="
+              width: 100%;
+              padding: 10px;
+              border: 1px solid #ddd;
+              border-radius: 5px;
+            "
+          >
+            <option value="" disabled selected>Select Number of Persons</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="custom-input-group">
+      <label for="message">Additional Information</label>
+      <textarea
+        id="message"
+        cols="20"
+        rows="7"
+        placeholder="Enter any additional information"
+      ></textarea>
+    </div>
+
+    <div class="custom-input-group">
+      <div class="submite-btn">
+        <button
+          type="button"
+          onclick="sendToWhatsApp()"
+          style="
+            background-color: #007bff; /* Blue background color */
+            color: white; /* White text color */
+            border: none; /* Remove border */
+            padding: 10px 20px; /* Add padding */
+            border-radius: 15px; /* Rounded corners */
+            font-size: 16px; /* Adjust font size */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: background-color 0.3s ease; /* Smooth background color transition */
+          "
+        >
+          Send Booking Request
+        </button>
+      </div>
+    </div>
+  </div>
+</form>
