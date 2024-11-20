@@ -12,11 +12,6 @@
       sizes="20x20"
     />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-
     <link rel="stylesheet" href="assets/css/select2.min.css" />
 
     <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css" />
@@ -28,9 +23,15 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
 
     <link rel="stylesheet" href="assets/css/animate.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
 
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link rel="stylesheet" href="assets/css/style2.css" />
+    <script src="assets/js/main2.js"></script>
   </head>
 
   <style>
@@ -67,10 +68,60 @@
   .category-box:visited {
     color: orange; /* Visited link color */
   }
+  
+    .testimonial-card {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        transition: color 0.3s ease, background-color 0.3s ease;
+    }
+
+    .testimonial-card:hover {
+        color: black;
+    }
+
+    .testimonial-card:hover .testimonial-body p,
+    .testimonial-card:hover .reviewer-info h4,
+    .testimonial-card:hover .reviewer-info h6 {
+        color: black;
+    }
+
+    .testimonial-card-top img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    /* Default text color */
+.testimonial-card,
+.testimonial-card .testimonial-body p,
+.testimonial-card .reviewer-info h4,
+.testimonial-card .reviewer-info h6 {
+    color: black; /* Default text color */
+}
+
+/* Hover effect */
+.testimonial-card:hover,
+.testimonial-card:hover .testimonial-body p,
+.testimonial-card:hover .reviewer-info h4,
+.testimonial-card:hover .reviewer-info h6 {
+    color: black; /* Hover text color */
+}
+
+/* Ensuring 'Traveller' text color remains black */
+.testimonial-bottom .reviewer-info h6 {
+    color: black; /* 'Traveller' color */
+}
+
+
     </style>
   <body>
-
-
+    <!-- <div class="preloader">
+<div class="loader">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</div>
+</div> -->
 
 
 <!-- search box start-->
@@ -269,12 +320,11 @@
 <!-- search box end-->
 
 
-    
-  <!-- category start -->
+    <!-- category start -->
     <div class="category-sidebar-wrapper">
   <div class="category-sidebar">
     <div class="category-header d-flex justify-content-between align-items-center">
-      <h4>Category</h4>
+      <h4>Travel Desk</h4>
       <div class="category-toggle">
         <i class="bi bi-x-lg"></i>
       </div>
@@ -349,9 +399,8 @@
 </div>
 <!-- category end -->
    
-
-       
-<!-- Header start -->
+   
+    <!-- Header start -->
 <header>
     <div class="header-area header-style-one">
         <div class="container">
@@ -480,179 +529,187 @@
     <div class="breadcrumb breadcrumb-style-one">
       <div class="container">
         <div class="col-lg-12 text-center">
-          <!-- <h2 class="breadcrumb-title">Package Details</h2> -->
+          <!-- <h2 class="breadcrumb-title">About Us</h2> -->
           <ul class="d-flex justify-content-center breadcrumb-items">
             <!-- <li class="breadcrumb-item"><a href="index.html">Home</a></li> -->
-            <!-- <li class="breadcrumb-item active">Package details</li> -->
+            <!-- <li class="breadcrumb-item active">About Us</li> -->
           </ul>
         </div>
       </div>
     </div>
 
-    <!-- banner end -->
 
-    <!-- Booking request form start -->
-<div class="container mt-120">
-  <form id="sightseeing_booking_form">
-    <div class="contact-form-wrap">
-      <h4> Booking Form</h4>
-      <p>Please send your query using the format below for each booking:</p>
+    <!-- Terms and Conditions Section -->
+<div class="container pt-5">
+  <h2
+    class="text-center"
+    style="font-weight: bold; font-size: 32px; margin-bottom: 20px"
+  >
+    Terms & Conditions
+  </h2>
 
-      <!-- Main Applicant -->
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="custom-input-group">
-            <label for="main_applicant">Main Applicant</label>
-            <input type="text" id="main_applicant" placeholder="Enter Main Applicant Name" required />
-          </div>
-        </div>
+  <!-- 1. Booking Process Section -->
+  <div class="section" style="margin-bottom: 30px">
+    <h3 style="font-weight: bold; font-size: 24px; color: #8db051">
+      1. Booking Process
+    </h3>
+    <p style="font-size: 16px; color: black; line-height: 1.8">
+      All bookings are subject to availability and confirmation by Paryatak
+      Guide - Sightseeing Organiser Company. An advance booking amount of 50% of
+      the total tour cost will be required to confirm a booking. Payment
+      instructions will be provided upon booking confirmation. The balance of
+      payment must be submitted on the day of arrival, as outlined in the
+      booking confirmation.
+    </p>
+  </div>
 
-        <!-- Co-Applicant -->
-        <div class="col-lg-6">
-          <div class="custom-input-group">
-            <label for="co_applicant">Co-Applicant</label>
-            <input type="text" id="co_applicant" placeholder="Enter Co-Applicant Name" />
-          </div>
-        </div>
-      </div>
+  <!-- 2. Cancellation & Refunds Section -->
+  <div class="section" style="margin-bottom: 30px">
+    <h3 style="font-weight: bold; font-size: 24px; color: #8db051">
+      2. Cancellation & Refunds
+    </h3>
+    <p style="font-size: 16px; color: black; line-height: 1.8">
+      Cancellation requests must be submitted in writing and will be subject to
+      the following fees:
+    </p>
+    <ul style="font-size: 16px; color: black">
+      <li>
+        More than 30 days before departure: 50% of the advance booking amount
+        will be refunded.
+      </li>
+      <li>Less than 30 days before departure: No refund.</li>
+    </ul>
+  </div>
 
-      <!-- Address -->
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="custom-input-group">
-            <label for="address">Address</label>
-            <input type="text" id="address" placeholder="Enter Address" required />
-          </div>
-        </div>
+  <!-- 3. Travel Documents Section -->
+  <div class="section" style="margin-bottom: 30px">
+    <h3 style="font-weight: bold; font-size: 24px; color: #8db051">
+      3. Travel Documents
+    </h3>
+    <p style="font-size: 16px; color: black; line-height: 1.8">
+      Customers are responsible for ensuring they have valid passports, visas,
+      and any other required travel documents for their journey. Paryatak Guide
+      - Sightseeing Organiser Company is not liable for any issues arising from
+      customers' failure to obtain the necessary travel documents.
+    </p>
+  </div>
 
-        <!-- City -->
-        <div class="col-lg-6">
-          <div class="custom-input-group">
-            <label for="city">City</label>
-            <input type="text" id="city" placeholder="Enter City" required />
-          </div>
-        </div>
-      </div>
+  <!-- 4. Health & Safety Section -->
+  <div class="section" style="margin-bottom: 30px">
+    <h3 style="font-weight: bold; font-size: 24px; color: #8db051">
+      4. Health & Safety
+    </h3>
+    <p style="font-size: 16px; color: black; line-height: 1.8">
+      Customers are responsible for ensuring they are in good health and
+      physical condition to participate in the tour activities. Paryatak Guide -
+      Sightseeing Organiser Company reserves the right to refuse participation
+      or remove any customer from the tour if their health or behavior
+      jeopardizes the safety or enjoyment of others.
+    </p>
+  </div>
 
-      <!-- Email and Mobile -->
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="custom-input-group">
-            <label for="email">Email ID</label>
-            <input type="email" id="email" placeholder="Enter Email ID" required />
-          </div>
-        </div>
+  <!-- 5. Insurance Section -->
+  <div class="section" style="margin-bottom: 30px">
+    <h3 style="font-weight: bold; font-size: 24px; color: #8db051">
+      5. Insurance
+    </h3>
+    <p style="font-size: 16px; color: black; line-height: 1.8">
+      It is strongly recommended that customers obtain comprehensive travel
+      insurance to cover medical emergencies, trip cancellations, and other
+      unforeseen events.
+    </p>
+  </div>
 
-        <div class="col-lg-6">
-          <div class="custom-input-group">
-            <label for="mobile">Mobile Number</label>
-            <input type="text" id="mobile" placeholder="Enter Mobile Number" required />
-          </div>
-        </div>
-      </div>
+  <!-- 6. Liability Section -->
+  <div class="section" style="margin-bottom: 30px">
+    <h3 style="font-weight: bold; font-size: 24px; color: #8db051">
+      6. Liability
+    </h3>
+    <p style="font-size: 16px; color: black; line-height: 1.8">
+      Paryatak Guide - Sightseeing Organiser Company is not liable for any loss,
+      damage, injury, or delay resulting from circumstances beyond our control,
+      including but not limited to natural disasters, transportation
+      disruptions, or acts of third parties. Customers participate in tours and
+      activities at their own risk, and Paryatak Guide - Sightseeing Organiser
+      Company shall not be held liable for any accidents, injuries, or losses
+      incurred during the tour.
+    </p>
+  </div>
 
-      <!-- Dates -->
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="custom-input-group">
-            <label for="dob">Date of Birth</label>
-            <input type="date" id="dob" />
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="custom-input-group">
-            <label for="anniversary_date">Marriage Anniversary Date</label>
-            <input type="date" id="anniversary_date" />
-          </div>
-        </div>
-      </div>
+  <!-- 7. Changes to Itinerary Section -->
+  <div class="section" style="margin-bottom: 30px">
+    <h3 style="font-weight: bold; font-size: 24px; color: #8db051">
+      7. Changes to Itinerary
+    </h3>
+    <p style="font-size: 16px; color: black; line-height: 1.8">
+      Paryatak Guide - Sightseeing Organiser Company reserves the right to
+      modify tour itineraries, accommodations, or activities due to unforeseen
+      circumstances or operational requirements. Customers will be notified of
+      any changes as soon as possible. In case of tour cancellation due to
+      unforeseen circumstances, customers will be offered alternative options or
+      a full refund.
+    </p>
+  </div>
 
-      <!-- Season -->
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="custom-input-group">
-            <label for="season">Season</label>
-            <select id="season" required>
-              <option value="" disabled selected>Select Season</option>
-              <option value="shoulder">Shoulder Season</option>
-              <option value="off_peak">Off-Peak Season</option>
-              <option value="peak">Peak Season</option>
-              <option value="super_peak">Super Peak Season</option>
-            </select>
-          </div>
-        </div>
+  <!-- 8. Code of Conduct Section -->
+  <div class="section" style="margin-bottom: 30px">
+    <h3 style="font-weight: bold; font-size: 24px; color: #8db051">
+      8. Code of Conduct
+    </h3>
+    <p style="font-size: 16px; color: black; line-height: 1.8">
+      Customers are expected to behave responsibly and respectfully towards
+      fellow travelers, tour guides, and local communities. Paryatak Guide -
+      Sightseeing Organiser Company reserves the right to remove any customer
+      from the tour for disruptive behavior, without refund.
+    </p>
+  </div>
 
-        <!-- Number of Nights -->
-        <div class="col-lg-6">
-          <div class="custom-input-group">
-            <label for="nights">Number of Nights</label>
-            <input type="number" id="nights" placeholder="Enter Number of Nights" required />
-          </div>
-        </div>
-      </div>
+  <!-- 9. Governing Law Section -->
+  <div class="section" style="margin-bottom: 30px">
+    <h3 style="font-weight: bold; font-size: 24px; color: #8db051">
+      9. Governing Law
+    </h3>
+    <p style="font-size: 16px; color: black; line-height: 1.8">
+      These Terms & Conditions shall be governed by and construed in accordance
+      with the laws of India. Any disputes arising from these Terms & Conditions
+      shall be subject to the exclusive jurisdiction of the courts of Ghazipur,
+      Uttar Pradesh, India.
+    </p>
+  </div>
 
-      <!-- Hotel Category -->
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="custom-input-group">
-            <label for="hotel_category">Hotel Category</label>
-            <select id="hotel_category" required>
-              <option value="" disabled selected>Select Hotel Category</option>
-              <option value="2_star">2**</option>
-              <option value="3_star">3***</option>
-              <option value="4_star">4**</option>
-              <option value="5_star">5***</option>
-              <option value="budget">Budget Hotel</option>
-              <option value="resorts">Resorts</option>
-              <option value="cortez">Cortez</option>
-              <option value="rental_house">Rental House</option>
-            </select>
-          </div>
-        </div>
-      </div>
+  <!-- 10. Acceptance of Terms Section -->
+  <div class="section" style="margin-bottom: 30px">
+    <h3 style="font-weight: bold; font-size: 24px; color: #8db051">
+      10. Acceptance of Terms
+    </h3>
+    <p style="font-size: 16px; color: black; line-height: 1.8">
+      By booking a tour with Paryatak Guide - Sightseeing Organiser Company,
+      customers acknowledge that they have read, understood, and agree to abide
+      by these Terms & Conditions.
+    </p>
+  </div>
 
-      <!-- Holiday Location -->
-      <div class="custom-input-group">
-        <label for="holiday_location">Holiday Location</label>
-        <input type="text" id="holiday_location" placeholder="Enter Holiday Location" required />
-      </div>
-
-      <!-- Additional Information -->
-      <div class="custom-input-group">
-        <label for="additional_info">Additional Information</label>
-        <textarea id="additional_info" cols="30" rows="5" placeholder="Enter Additional Information"></textarea>
-      </div>
-
-      <!-- Submit Button -->
-      <div class="custom-input-group">
-        <div class="submit-btn">
-          <button
-            type="button"
-            onclick="sendToWhatsApp()"
-            style="
-              background-color: #007bff;
-              color: white;
-              border: none;
-              padding: 10px 20px;
-              border-radius: 15px;
-              font-size: 16px;
-              cursor: pointer;
-              transition: background-color 0.3s ease;
-            "
-          >
-            Send Booking Request
-          </button>
-        </div>
-      </div>
-    </div>
-  </form>
+  <!-- Paryatak Guide and Hospitality Industry Section -->
+  <div class="section" style="margin-bottom: 30px">
+    <h3 style="font-weight: bold; font-size: 24px; color: #8db051">
+      Paryatak Guide and Hospitality Industry
+    </h3>
+    <p style="font-size: 16px; color: black; line-height: 1.8">
+      Description of Services:
+    </p>
+    <ul style="font-size: 16px; color: black">
+      <li>
+        Reservation services for accommodation, cruises, and package tours.
+      </li>
+      <li>Tourist guide services.</li>
+      <li>Other travel arrangement and related services (n.e.c).</li>
+      <li>Taxi services, including radio taxi and other similar services.</li>
+      <li>Tour operator services.</li>
+    </ul>
+  </div>
 </div>
 
 
-
-        <!-- Booking request form end -->
-
-    
     <!-- Footer  start-->
     <div class="footer-area mt-110">
       <div class="footer-main-wrapper">
@@ -861,8 +918,6 @@
 
     <!-- Footer  end-->
 
-
-    
     <script
       data-cfasync="false"
       src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
@@ -878,63 +933,7 @@
 
     <script src="assets/js/main.js"></script>
 
-
-
-<script>
-  function sendToWhatsApp() {
-    const guestName = document.getElementById('guest_name').value;
-    const locationType = document.getElementById('location_type').value;
-    const locationName = document.getElementById('location_name').value;
-    const sightseeingDate = document.getElementById('sightseeing_date1').value;
-    const numberOfPersons = document.getElementById('number_of_persons').value;
-    const membershipName = document.getElementById('membership_name').value;
-    const membershipCode = document.getElementById('membership_code').value;
-    const membershipID = document.getElementById('membership_id').value;
-    const additionalInfo = document.getElementById('message').value;
-
-    const whatsappMessage = `Guest Name: ${guestName}%0A
-Location Type: ${locationType}%0A
-Location Name: ${locationName}%0A
-Sightseeing Date: ${sightseeingDate}%0A
-Number of Persons: ${numberOfPersons}%0A
-Membership Name: ${membershipName}%0A
-Membership Code: ${membershipCode}%0A
-Membership ID: ${membershipID}%0A
-Additional Info: ${additionalInfo}`;
-
-    const whatsappUrl = `https://wa.me/919555695021?text=${whatsappMessage}`;
-    window.open(whatsappUrl, "_blank");
-  }
-</script>
-
-<script>
-  function sendToWhatsApp() {
-  const fields = [
-    'main_applicant',
-    'co_applicant',
-    'address',
-    'city',
-    'email',
-    'mobile',
-    'dob',
-    'anniversary_date',
-    'season',
-    'nights',
-    'hotel_category',
-    'holiday_location',
-    'additional_info',
-  ];
-
-  const data = fields
-    .map((id) => `${id.replace(/_/g, ' ')}: ${document.getElementById(id).value}`)
-    .join('\n');
-
-  const url = `https://wa.me/919555695021?Hello=${encodeURIComponent(data)}`;
-  window.open(url, '_blank');
-}
-
-
-</script>
+    
 
 
 
